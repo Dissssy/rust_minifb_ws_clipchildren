@@ -617,7 +617,7 @@ impl Window {
                 0,
                 class_name.as_ptr(),
                 window_name.as_ptr(),
-                flags,
+                flags | 0x02000000, // WS_CLIPCHILDREN
                 winuser::CW_USEDEFAULT,
                 winuser::CW_USEDEFAULT,
                 rect.right,
